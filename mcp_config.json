@@ -1,0 +1,17 @@
+{
+  "firebase": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "firebase-tools@latest",
+      "experimental:mcp",
+      "--dir",
+      "/Users/gustavoramalho/Downloads/firebase-notes"
+
+    ],
+    "env": {
+      "FIREBASE_PROJECT": "nota-e0322"
+    },
+    "transport": "stdio"
+  }
+}

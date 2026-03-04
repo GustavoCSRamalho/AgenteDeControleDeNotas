@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "nota-e0322",
+    "staging": "nota-e0322"
+  },
+  "targets": {},
+  "etags": {}
+}
