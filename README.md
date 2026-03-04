@@ -161,9 +161,9 @@ export GROQ_API_KEY=gsk_SUA_CHAVE_AQUI
 
 ---
 
-# 📝 Notes Agent — LangChain + Firebase MCP (Python)
+# 📝 Notes Agent — LangChain + Groq + Firebase MCP (Python)
 
-Agente de notas via chat no terminal usando **LangChain (Python)** e **Firebase MCP**.
+Agente de notas via chat no terminal usando **LangChain (Python)**, **Groq (Llama 4 Scout)** e **Firebase MCP**.
 
 ## 🏗️ Arquitetura
 
@@ -172,7 +172,7 @@ Terminal (input/asyncio)
          │
          ▼
   LangChain Agent (ReAct)
-  • Model: Claude 3.5 Sonnet
+  • Model: Llama 4 Scout (via Groq)
   • Framework: LangGraph
          │
          ▼
@@ -191,7 +191,7 @@ Terminal (input/asyncio)
 
 - Python >= 3.11
 - Node.js >= 18 (necessário para o Firebase MCP)
-- Conta na [Anthropic](https://console.anthropic.com) com API Key
+- Conta no [Groq Console](https://console.groq.com) com API Key
 - Conta no [Firebase](https://console.firebase.google.com) com Firestore ativado
 
 ## 🚀 Instalação
@@ -226,7 +226,7 @@ firebase login
 
 ```bash
 cp .env.example .env
-# Edite o .env e adicione sua ANTHROPIC_API_KEY
+# Edite o .env e adicione sua GROQ_API_KEY
 ```
 
 ### 5. Configure o projeto Firebase
@@ -276,7 +276,7 @@ python main.py
 notes-agent-py/
 ├── src/
 │   ├── __init__.py
-│   ├── agent.py       # Agente LangChain (ReAct + Claude)
+│   ├── agent.py       # Agente LangChain (ReAct + Groq/Llama)
 │   └── mcp.py         # Conexão com Firebase MCP
 ├── main.py            # Entry point — chat loop assíncrono
 ├── mcp_config.json    # Config do servidor MCP
@@ -290,7 +290,7 @@ notes-agent-py/
 | Tecnologia | Versão | Papel |
 |---|---|---|
 | `langchain` | >=0.3 | Core do framework |
-| `langchain-anthropic` | >=0.3 | Integração com Claude |
+| `langchain-groq` | >=0.1 | Integração com Groq/Llama |
 | `langgraph` | >=0.2 | Agente ReAct (orquestração) |
 | `langchain-mcp-adapters` | >=0.1 | Bridge MCP → LangChain tools |
 | `firebase-tools` (Node) | latest | Firebase MCP Server |
@@ -303,8 +303,8 @@ notes-agent-py/
 pip install -r requirements.txt
 ```
 
-**`ANTHROPIC_API_KEY not found`**
-Verifique se o `.env` existe e tem a chave correta.
+**`GROQ_API_KEY not found`**
+Verifique se o `.env` existe e tem a chave correta (começa com `gsk_`).
 
 **Erro de conexão com Firebase MCP**
 ```bash
@@ -337,7 +337,6 @@ service cloud.firestore {
 - [Meta Llama 4](https://ai.meta.com/blog/llama-4-multimodal-intelligence/)
 - [LangChain Python](https://python.langchain.com)
 - [Firebase Console](https://console.firebase.google.com)
-- [Anthropic Console](https://console.anthropic.com)
 
 ---
 
