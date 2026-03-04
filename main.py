@@ -3,8 +3,8 @@ import os
 from dotenv import load_dotenv
 from langchain_core.messages import HumanMessage
 
-from firebase_mcp import create_firebase_mcp_client
-from agent import create_agent
+from src.firebase_mcp import create_firebase_mcp_client
+from src.agent import create_agent
 
 load_dotenv()
 

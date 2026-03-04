@@ -38,7 +38,8 @@ PARENT = BASE_PATH
 
 
 def load_mcp_config() -> dict:
-    config_path = Path(__file__).parent / "mcp_config.json"
+    config_path = Path(__file__).resolve().parent.parent / "mcp_config.json"
+    print(config_path)
     with open(config_path, "r") as f:
         return json.load(f)
 
