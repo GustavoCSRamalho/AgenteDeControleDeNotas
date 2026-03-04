@@ -89,7 +89,7 @@ oco config set OCO_EMOJI=true
 oco config set OCO_WHY=true
 
 # Idioma das mensagens (pt para português, en para inglês)
-oco config set OCO_LANGUAGE=pt
+oco config set OCO_LANGUAGE=pt_br
 ```
 
 Verifique tudo que foi configurado:
