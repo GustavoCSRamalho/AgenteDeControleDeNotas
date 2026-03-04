@@ -1,29 +1,3 @@
-# import json
-# from pathlib import Path
-# from langchain_mcp_adapters.client import MultiServerMCPClient
-
-
-# def load_mcp_config() -> dict:
-#     config_path = Path(__file__).parent / "mcp_config.json"
-#     with open(config_path, "r") as f:
-#         return json.load(f)
-
-
-# async def create_firebase_mcp_client():
-#     config = load_mcp_config()
-#     client = MultiServerMCPClient(config)
-#     all_tools = await client.get_tools()
-
-#     # Filtra apenas ferramentas do Firestore
-#     tools = [t for t in all_tools if "firestore" in t.name.lower()]
-
-#     print(f"\n✅ Firebase MCP conectado! {len(tools)} ferramentas carregadas:")
-#     for tool in tools:
-#         print(f"   🔧 {tool.name}")
-#     print()
-
-#     return client, tools
-
 import json
 from pathlib import Path
 from datetime import datetime, timezone
